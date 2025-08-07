@@ -1,0 +1,360 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoozeBox - Интернет-магазин алкогольных напитков</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>BoozeBox</h1></a>
+                </div>
+                <nav class="nav">
+                    <a href="catalog.html" class="nav-link active">Каталог</a>
+                    <a href="#" class="nav-link">О нас</a>
+                    <a href="#" class="nav-link">Доставка</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="cart-link">Корзина (0)</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Главная</a>
+                <span class="breadcrumb-separator">→</span>
+                <a href="catalog.html">Каталог</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Вино</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content with Sidebar -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Sidebar with Categories and Filters -->
+                <aside class="sidebar">
+                    <h2 class="sidebar-title">Категории</h2>
+                    <nav class="categories-nav">
+                        <a href="catalog.html" class="category-item active">
+                            <span class="category-icon">🍷</span>
+                            <div class="category-info">
+                                <h3>Вино</h3>
+                                <p>Красные, белые, игристые</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🥃</span>
+                            <div class="category-info">
+                                <h3>Крепкие напитки</h3>
+                                <p>Виски, коньяк, водка</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍺</span>
+                            <div class="category-info">
+                                <h3>Пиво</h3>
+                                <p>Крафтовое и классическое</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍸</span>
+                            <div class="category-info">
+                                <h3>Коктейли</h3>
+                                <p>Готовые миксы</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🥂</span>
+                            <div class="category-info">
+                                <h3>Шампанское</h3>
+                                <p>Игристые вина</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍾</span>
+                            <div class="category-info">
+                                <h3>Элитный алкоголь</h3>
+                                <p>Премиум коллекция</p>
+                            </div>
+                        </a>
+                    </nav>
+
+                    <!-- Filters -->
+                    <div class="filters">
+                        <h3 class="filter-title">Фильтры</h3>
+                        
+                        <form class="filter-form" method="GET">
+                            <!-- Price Filter -->
+                            <div class="filter-group">
+                                <h4>Цена</h4>
+                                <div class="price-inputs">
+                                    <input type="number" name="price_min" placeholder="от" min="0" class="price-input">
+                                    <span>—</span>
+                                    <input type="number" name="price_max" placeholder="до" min="0" class="price-input">
+                                </div>
+                            </div>
+
+                            <!-- Wine Type Filter -->
+                            <div class="filter-group">
+                                <h4>Тип вина</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="wine_type" value="red">
+                                    <span class="checkmark"></span>
+                                    Красное
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="wine_type" value="white">
+                                    <span class="checkmark"></span>
+                                    Белое
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="wine_type" value="rose">
+                                    <span class="checkmark"></span>
+                                    Розовое
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="wine_type" value="sparkling">
+                                    <span class="checkmark"></span>
+                                    Игристое
+                                </label>
+                            </div>
+
+                            <!-- Country Filter -->
+                            <div class="filter-group">
+                                <h4>Страна</h4>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="country" value="france">
+                                    <span class="checkmark"></span>
+                                    Франция
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="country" value="italy">
+                                    <span class="checkmark"></span>
+                                    Италия
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="country" value="spain">
+                                    <span class="checkmark"></span>
+                                    Испания
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="country" value="germany">
+                                    <span class="checkmark"></span>
+                                    Германия
+                                </label>
+                            </div>
+
+                            <button type="submit" class="filter-button">Применить фильтры</button>
+                            <a href="catalog.html" class="reset-filters">Сбросить</a>
+                        </form>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="content-area">
+                    <div class="catalog-header">
+                        <h1 class="catalog-title">Вино</h1>
+                        <div class="catalog-meta">
+                            <span class="results-count">Найдено 24 товара</span>
+                            <form class="sort-form" method="GET">
+                                <label for="sort">Сортировать:</label>
+                                <select name="sort" id="sort" class="sort-select" onchange="this.form.submit()">
+                                    <option value="popular">По популярности</option>
+                                    <option value="price_asc">По цене: сначала дешевые</option>
+                                    <option value="price_desc">По цене: сначала дорогие</option>
+                                    <option value="name">По названию</option>
+                                    <option value="new">Новинки</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="products-grid">
+                        <!-- Product Cards -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Каберне Совиньон">
+                                <div class="product-badge new">Новинка</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Каберне Совиньон Резерв</h3>
+                                <p class="product-details">Франция, 2020, 750мл</p>
+                                <div class="product-rating">★★★★★</div>
+                                <p class="product-price">3 490 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Шардоне">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Шардоне Премиум</h3>
+                                <p class="product-details">Италия, 2021, 750мл</p>
+                                <div class="product-rating">★★★★☆</div>
+                                <p class="product-price">2 890 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Розовое вино">
+                                <div class="product-badge sale">-15%</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Розе де Прованс</h3>
+                                <p class="product-details">Франция, 2022, 750мл</p>
+                                <div class="product-rating">★★★★☆</div>
+                                <p class="product-price">
+                                    <span class="old-price">2 490 ₽</span>
+                                    2 116 ₽
+                                </p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Игристое вино">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Просекко Экстра Драй</h3>
+                                <p class="product-details">Италия, 2022, 750мл</p>
+                                <div class="product-rating">★★★★★</div>
+                                <p class="product-price">1 890 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Бордо">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Бордо Супериор</h3>
+                                <p class="product-details">Франция, 2019, 750мл</p>
+                                <div class="product-rating">★★★★★</div>
+                                <p class="product-price">4 290 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Рислинг">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Рислинг Драй</h3>
+                                <p class="product-details">Германия, 2021, 750мл</p>
+                                <div class="product-rating">★★★★☆</div>
+                                <p class="product-price">2 190 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Мерло">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Мерло Классик</h3>
+                                <p class="product-details">Испания, 2020, 750мл</p>
+                                <div class="product-rating">★★★☆☆</div>
+                                <p class="product-price">1 690 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Шампанское">
+                                <div class="product-badge premium">Premium</div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Шампанское Брют</h3>
+                                <p class="product-details">Франция, NV, 750мл</p>
+                                <div class="product-rating">★★★★★</div>
+                                <p class="product-price">5 890 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=200&width=150" alt="Совиньон Блан">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Совиньон Блан</h3>
+                                <p class="product-details">Новая Зеландия, 2022, 750мл</p>
+                                <div class="product-rating">★★★★☆</div>
+                                <p class="product-price">2 590 ₽</p>
+                                <a href="product.html" class="add-to-cart">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="pagination">
+                        <a href="#" class="pagination-link disabled">← Предыдущая</a>
+                        <a href="#" class="pagination-link active">1</a>
+                        <a href="#" class="pagination-link">2</a>
+                        <a href="#" class="pagination-link">3</a>
+                        <span class="pagination-dots">...</span>
+                        <a href="#" class="pagination-link">8</a>
+                        <a href="#" class="pagination-link">Следующая →</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BoozeBox</h4>
+                    <p>Премиальные алкогольные напитки с доставкой</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Email: info@boozebox.ru</li>
+                        <li>Время работы: 10:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoozeBox. Все права защищены.</p>
+                <p class="age-warning">Чрезмерное употребление алкоголя вредит вашему здоровью</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
