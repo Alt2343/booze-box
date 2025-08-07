@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каберне Совиньон Резерв - BoozeBox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html"><h1>BoozeBox</h1></a>
+                </div>
+                <nav class="nav">
+                    <a href="catalog.html" class="nav-link">Каталог</a>
+                    <a href="#" class="nav-link">О нас</a>
+                    <a href="#" class="nav-link">Доставка</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="cart-link">Корзина (0)</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Главная</a>
+                <span class="breadcrumb-separator">→</span>
+                <a href="catalog.html">Каталог</a>
+                <span class="breadcrumb-separator">→</span>
+                <a href="catalog.html">Вино</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Каберне Совиньон Резерв</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content with Sidebar -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Sidebar with Categories -->
+                <aside class="sidebar">
+                    <h2 class="sidebar-title">Категории</h2>
+                    <nav class="categories-nav">
+                        <a href="catalog.html" class="category-item active">
+                            <span class="category-icon">🍷</span>
+                            <div class="category-info">
+                                <h3>Вино</h3>
+                                <p>Красные, белые, игристые</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🥃</span>
+                            <div class="category-info">
+                                <h3>Крепкие напитки</h3>
+                                <p>Виски, коньяк, водка</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍺</span>
+                            <div class="category-info">
+                                <h3>Пиво</h3>
+                                <p>Крафтовое и классическое</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍸</span>
+                            <div class="category-info">
+                                <h3>Коктейли</h3>
+                                <p>Готовые миксы</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🥂</span>
+                            <div class="category-info">
+                                <h3>Шампанское</h3>
+                                <p>Игристые вина</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍾</span>
+                            <div class="category-info">
+                                <h3>Элитный алкоголь</h3>
+                                <p>Премиум коллекция</p>
+                            </div>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Product Content -->
+                <div class="content-area">
+                    <div class="product-page">
+                        <div class="product-main">
+                            <div class="product-image-section">
+                                <div class="product-image-large">
+                                    <img src="/placeholder.svg?height=400&width=300" alt="Каберне Совиньон Резерв">
+                                </div>
+                            </div>
+
+                            <div class="product-details-section">
+                                <h1 class="product-title">Каберне Совиньон Резерв</h1>
+                                
+                                <div class="product-meta">
+                                    <div class="product-rating">
+                                        <span class="stars">★★★★★</span>
+                                        <span class="rating-text">(24 отзыва)</span>
+                                    </div>
+                                    <div class="product-availability">В наличии</div>
+                                </div>
+
+                                <div class="product-price-section">
+                                    <div class="product-price">3 490 ₽</div>
+                                </div>
+
+                                <div class="product-short-info">
+                                    <p>Элегантное красное вино с богатым вкусом и долгим послевкусием. Идеально подходит для особых случаев и сочетается с мясными блюдами.</p>
+                                </div>
+
+                                <form class="add-to-cart-form" method="POST">
+                                    <div class="quantity-section">
+                                        <label for="quantity">Количество:</label>
+                                        <div class="quantity-controls">
+                                            <button type="button" class="quantity-btn minus">−</button>
+                                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" class="quantity-input">
+                                            <button type="button" class="quantity-btn plus">+</button>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="add-to-cart-btn">Добавить в корзину</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Product Information Tabs -->
+                        <div class="product-info-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="description">Описание</button>
+                                <button class="tab-button" data-tab="characteristics">Характеристики</button>
+                                <button class="tab-button" data-tab="reviews">Отзывы</button>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-panel active" id="description">
+                                    <h3>Описание товара</h3>
+                                    <p>Каберне Совиньон Резерв — это выдающееся красное вино, произведенное из отборного винограда сорта Каберне Совиньон. Вино обладает глубоким рубиновым цветом и сложным ароматом с нотами черной смородины, ванили и специй.</p>
+                                    
+                                    <p>Во вкусе преобладают тона спелых темных ягод, дополненные оттенками дуба и шоколада. Танины мягкие и хорошо сбалансированные, что делает это вино приятным для употребления уже сейчас, но также позволяет ему развиваться при дальнейшей выдержке.</p>
+                                    
+                                    <p>Идеально сочетается с красным мясом, дичью, зрелыми сырами и блюдами средиземноморской кухни. Рекомендуется подавать при температуре 16-18°C.</p>
+                                </div>
+
+                                <div class="tab-panel" id="characteristics">
+                                    <h3>Характеристики</h3>
+                                    <table class="characteristics-table">
+                                        <tr>
+                                            <td>Страна производства</td>
+                                            <td>Франция</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Регион</td>
+                                            <td>Бордо</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Сорт винограда</td>
+                                            <td>Каберне Совиньон</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Год урожая</td>
+                                            <td>2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Крепость</td>
+                                            <td>13.5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Объем</td>
+                                            <td>750 мл</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Цвет</td>
+                                            <td>Красное</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Сахар</td>
+                                            <td>Сухое</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Температура подачи</td>
+                                            <td>16-18°C</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="tab-panel" id="reviews">
+                                    <h3>Отзывы покупателей</h3>
+                                    <div class="reviews-summary">
+                                        <div class="average-rating">
+                                            <span class="rating-number">4.8</span>
+                                            <div class="rating-stars">★★★★★</div>
+                                            <span class="reviews-count">на основе 24 отзывов</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews-list">
+                                        <div class="review-item">
+                                            <div class="review-header">
+                                                <span class="reviewer-name">Александр К.</span>
+                                                <div class="review-rating">★★★★★</div>
+                                                <span class="review-date">15 января 2024</span>
+                                            </div>
+                                            <p class="review-text">Отличное вино! Богатый вкус, приятное послевкусие. Идеально подошло к стейку. Обязательно закажу еще.</p>
+                                        </div>
+
+                                        <div class="review-item">
+                                            <div class="review-header">
+                                                <span class="reviewer-name">Мария С.</span>
+                                                <div class="review-rating">★★★★☆</div>
+                                                <span class="review-date">8 января 2024</span>
+                                            </div>
+                                            <p class="review-text">Хорошее вино за свою цену. Немного терпкое, но это дело вкуса. Доставка быстрая, упаковка надежная.</p>
+                                        </div>
+
+                                        <div class="review-item">
+                                            <div class="review-header">
+                                                <span class="reviewer-name">Дмитрий В.</span>
+                                                <div class="review-rating">★★★★★</div>
+                                                <span class="review-date">2 января 2024</span>
+                                            </div>
+                                            <p class="review-text">Превосходное качество! Заказывал на новогодний стол - все гости были в восторге. Рекомендую!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BoozeBox</h4>
+                    <p>Премиальные алкогольные напитки с доставкой</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Email: info@boozebox.ru</li>
+                        <li>Время работы: 10:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoozeBox. Все права защищены.</p>
+                <p class="age-warning">Чрезмерное употребление алкоголя вредит вашему здоровью</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab switching without external JS libraries
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panels
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding panel
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Simple quantity controls
+        document.querySelector('.minus').addEventListener('click', () => {
+            const input = document.querySelector('.quantity-input');
+            if (input.value > 1) input.value = parseInt(input.value) - 1;
+        });
+
+        document.querySelector('.plus').addEventListener('click', () => {
+            const input = document.querySelector('.quantity-input');
+            if (input.value < 10) input.value = parseInt(input.value) + 1;
+        });
+    </script>
+</body>
+</html>
