@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BoozeBox - Интернет-магазин алкогольных напитков{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>BoozeBox</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Каталог</a>
+                    <a href="#" class="nav-link">О нас</a>
+                    <a href="#" class="nav-link">Доставка</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="cart-link">Корзина (0)</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Премиальные напитки с доставкой</h2>
+                <p class="hero-subtitle">Широкий выбор качественных алкогольных напитков для любого случая</p>
+                <a href="#catalog" class="cta-button">Перейти к каталогу</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content with Sidebar -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Sidebar with Categories -->
+                <aside class="sidebar">
+                    <h2 class="sidebar-title">Категории</h2>
+                    <nav class="categories-nav">
+                        <a href="#" class="category-item active">
+                            <span class="category-icon">🍷</span>
+                            <div class="category-info">
+                                <h3>Вино</h3>
+                                <p>Красные, белые, игристые</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🥃</span>
+                            <div class="category-info">
+                                <h3>Крепкие напитки</h3>
+                                <p>Виски, коньяк, водка</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍺</span>
+                            <div class="category-info">
+                                <h3>Пиво</h3>
+                                <p>Крафтовое и классическое</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍸</span>
+                            <div class="category-info">
+                                <h3>Коктейли</h3>
+                                <p>Готовые миксы</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🥂</span>
+                            <div class="category-info">
+                                <h3>Шампанское</h3>
+                                <p>Игристые вина</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <span class="category-icon">🍾</span>
+                            <div class="category-info">
+                                <h3>Элитный алкоголь</h3>
+                                <p>Премиум коллекция</p>
+                            </div>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="content-area">
+                    <section class="featured">
+                        <h2 class="section-title">Рекомендуемые товары</h2>
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="Вино">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Шардоне Резерв</h3>
+                                    <p class="product-price">2 490 ₽</p>
+                                    <a href="#" class="add-to-cart">В корзину</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="Виски">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Односолодовый виски</h3>
+                                    <p class="product-price">4 890 ₽</p>
+                                    <a href="#" class="add-to-cart">В корзину</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="Пиво">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Крафтовое IPA</h3>
+                                    <p class="product-price">320 ₽</p>
+                                    <a href="#" class="add-to-cart">В корзину</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="Шампанское">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Шампанское Брют</h3>
+                                    <p class="product-price">1 890 ₽</p>
+                                    <a href="#" class="add-to-cart">В корзину</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="Коньяк">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Коньяк XO</h3>
+                                    <p class="product-price">8 990 ₽</p>
+                                    <a href="#" class="add-to-cart">В корзину</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="/placeholder.svg?height=200&width=150" alt="Джин">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Премиум джин</h3>
+                                    <p class="product-price">3 290 ₽</p>
+                                    <a href="#" class="add-to-cart">В корзину</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Info Section -->
+    <section class="info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставим ваш заказ в течение 2-4 часов по Москве</p>
+                </div>
+                <div class="info-card">
+                    <h3>Качественные товары</h3>
+                    <p>Работаем только с проверенными поставщиками</p>
+                </div>
+                <div class="info-card">
+                    <h3>Возраст 18+</h3>
+                    <p>Продажа алкоголя лицам старше 18 лет</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BoozeBox</h4>
+                    <p>Премиальные алкогольные напитки с доставкой</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Email: info@boozebox.ru</li>
+                        <li>Время работы: 10:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoozeBox. Все права защищены.</p>
+                <p class="age-warning">Чрезмерное употребление алкоголя вредит вашему здоровью</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

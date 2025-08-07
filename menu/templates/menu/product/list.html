@@ -1,0 +1,41 @@
+{% extends "menu/base.html" %}
+{% load static %}
+
+{% block title %}
+  {% if category %}{{ category.name }}{% else %}Категории{% endif %}
+{% endblock %}
+
+{% block content %}
+<!-- Categories -->
+    <section class="categories" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Категории</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🍷</div>
+                    <h3>Вино</h3>
+                    <p>Красные, белые, игристые</p>
+                    <a href="#" class="category-link">Смотреть все</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🥃</div>
+                    <h3>Крепкие напитки</h3>
+                    <p>Виски, коньяк, водка</p>
+                    <a href="#" class="category-link">Смотреть все</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍺</div>
+                    <h3>Пиво</h3>
+                    <p>Крафтовое и классическое</p>
+                    <a href="#" class="category-link">Смотреть все</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🍸</div>
+                    <h3>Коктейли</h3>
+                    <p>Готовые миксы</p>
+                    <a href="#" class="category-link">Смотреть все</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
